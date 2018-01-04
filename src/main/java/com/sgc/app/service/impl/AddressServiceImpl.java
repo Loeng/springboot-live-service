@@ -1,4 +1,4 @@
-package com.sgc.app.controller.service.impl;
+package com.sgc.app.service.impl;
 
 import java.util.List;
 
@@ -10,7 +10,7 @@ import com.baomidou.mybatisplus.service.impl.ServiceImpl;
 import com.sgc.domain.Address;
 import com.sgc.domain.mapper.AddressMapper;
 import com.sgc.domain.vm.ResultVM;
-import com.sgc.app.controller.service.AddressService;
+import com.sgc.app.service.AddressService;
 
 @Service
 public class AddressServiceImpl extends ServiceImpl<AddressMapper, Address> implements AddressService {

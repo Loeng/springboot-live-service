@@ -1,4 +1,4 @@
-package com.sgc.app.controller.service.impl;
+package com.sgc.app.service.impl;
 
 import java.util.List;
 

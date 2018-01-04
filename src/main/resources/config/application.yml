@@ -1,6 +1,6 @@
 spring:
   application:
-    name: SGC-Admin
+    name: Live-Admin
   profiles:
     active: dev
   datasource:

@@ -28,5 +28,6 @@ public class LiveApplication {
 						+ "Application '{}' is running! Access URLs:\n\t"
 						+ "Local: \t\thttp://localhost:{}\n----------------------------------------------------------",
 				env.getProperty("spring.application.name"), env.getProperty("server.port"));
+
 	}
 }

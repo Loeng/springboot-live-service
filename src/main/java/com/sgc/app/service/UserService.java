@@ -8,5 +8,4 @@ import com.sgc.domain.vm.ResultVM;
 public interface UserService extends IService<User> {
 
 	ResultVM register(User user);
-	ResultVM registerAccount(Account account);
 }

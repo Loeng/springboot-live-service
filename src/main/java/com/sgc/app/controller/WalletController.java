@@ -14,7 +14,7 @@ import com.baomidou.mybatisplus.mapper.EntityWrapper;
 import com.sgc.comm.util.GUIDHelper;
 import com.sgc.domain.Wallet;
 import com.sgc.domain.vm.ResultVM;
-import com.sgc.app.controller.service.WalletService;
+import com.sgc.app.service.WalletService;
 
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;

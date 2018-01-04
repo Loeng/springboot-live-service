@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.baomidou.mybatisplus.mapper.EntityWrapper;
 import com.sgc.domain.Address;
 import com.sgc.domain.vm.ResultVM;
-import com.sgc.app.controller.service.AddressService;
+import com.sgc.app.service.AddressService;
 
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
