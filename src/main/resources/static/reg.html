@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="KingSign">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>KJZ Admin</title>
+
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="assets/img/favicon-96x96.png">
+
+  <!-- build:css({.tmp/serve,src}) styles/vendor.css -->
+  <!-- bower:css -->
+  <link rel="stylesheet" href="lib/ionicons.css" >
+  <link rel="stylesheet" href="lib/angular-toastr.css" >
+  <link rel="stylesheet" href="lib/animate.css" >
+  <link rel="stylesheet" href="lib/bootstrap.css" >
+  <link rel="stylesheet" href="lib/bootstrap-select.css" >
+  <link rel="stylesheet" href="lib/bootstrap-switch.css" >
+  <link rel="stylesheet" href="lib/bootstrap-tagsinput.css" >
+  <link rel="stylesheet" href="lib/font-awesome.css" >
+  <link rel="stylesheet" href="lib/fullcalendar.css" >
+  <link rel="stylesheet" href="lib/leaflet.css" >
+  <link rel="stylesheet" href="lib/angular-progress-button-styles.min.css" >
+  <link rel="stylesheet" href="lib/angular-chart.css" >
+  <link rel="stylesheet" href="lib/chartist.min.css" >
+  <link rel="stylesheet" href="lib/morris.css" >
+  <link rel="stylesheet" href="lib/ion.rangeSlider.css" >
+  <link rel="stylesheet" href="lib/ion.rangeSlider.skinFlat.css" >
+  <link rel="stylesheet" href="lib/textAngular.css" >
+  <link rel="stylesheet" href="lib/xeditable.css" >
+  <link rel="stylesheet" href="lib/style.css" >
+  <link rel="stylesheet" href="lib/loading-bar.css" >
+  <!-- endbower -->
+  <!-- endbuild -->
+
+  <!-- build:css({.tmp/serve,src}) styles/auth.css -->
+  <!-- inject:css -->
+  <link rel="stylesheet" href="app/auth.css">
+  <!-- endinject -->
+  <!-- endbuild -->
+</head>
+<body>
+<main class="auth-main" ng-controller="SignController" ng-if="show">
+  <div class="auth-block">
+    <h1>注册 KJZ Admin</h1>
+
+    <form class="form-horizontal" ng-submit="save()">
+      <div class="form-group">
+        <label for="username" class="col-sm-2 control-label">用户名</label>
+
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="username" placeholder="用户名" ng-model="user.username"
+                 required>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="password" class="col-sm-2 control-label">密码</label>
+
+        <div class="col-sm-10">
+          <input type="password" class="form-control" id="password" placeholder="密码" ng-model="user.password"
+                 required>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="inputEmail3" class="col-sm-2 control-label">邮箱</label>
+
+        <div class="col-sm-10">
+          <input type="email" class="form-control" id="inputEmail3" ng-model="user.email" placeholder="邮箱">
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+          <button type="submit" class="btn btn-default btn-auth">注册</button>
+          <a href="auth.html" class="forgot-pass">登录</a>
+        </div>
+      </div>
+    </form>
+
+    <div class="auth-sep"><span><span>or Sign up with one click</span></span></div>
+
+    <div class="al-share-auth">
+      <ul class="al-share clearfix">
+        <li><i class="socicon socicon-facebook" title="Share on Facebook"></i></li>
+        <li><i class="socicon socicon-twitter" title="Share on Twitter"></i></li>
+        <li><i class="socicon socicon-google" title="Share on Google Plus"></i></li>
+      </ul>
+    </div>
+  </div>
+</main>
+<div id="preloader" ng-show="!show">
+  <div></div>
+</div>
+<!-- build:js(src) scripts/vendor.js -->
+<!-- bower:js -->
+<script src="../bower_components/jquery/dist/jquery.js"></script>
+<script src="../bower_components/Chart.js/Chart.js"></script>
+<script src="../bower_components/amcharts/dist/amcharts/amcharts.js"></script>
+<script src="../bower_components/amcharts/dist/amcharts/plugins/responsive/responsive.min.js"></script>
+<script src="../bower_components/amcharts/dist/amcharts/serial.js"></script>
+<script src="../bower_components/amcharts/dist/amcharts/funnel.js"></script>
+<script src="../bower_components/amcharts/dist/amcharts/pie.js"></script>
+<script src="../bower_components/amcharts/dist/amcharts/gantt.js"></script>
+<script src="../bower_components/amcharts-stock/dist/amcharts/amstock.js"></script>
+<script src="../bower_components/ammap/dist/ammap/ammap.js"></script>
+<script src="../bower_components/ammap/dist/ammap/maps/js/worldLow.js"></script>
+<script src="../bower_components/angular/angular.js"></script>
+<script src="../bower_components/angular-route/angular-route.js"></script>
+<script src="../bower_components/angular-resource/angular-resource.js"></script>
+<script src="../bower_components/slimScroll/jquery.slimscroll.js"></script>
+<script src="../bower_components/angular-slimscroll/angular-slimscroll.js"></script>
+<script src="../bower_components/angular-toastr/dist/angular-toastr.tpls.js"></script>
+<script src="../bower_components/angular-touch/angular-touch.js"></script>
+<script src="../bower_components/jquery-ui/jquery-ui.js"></script>
+<script src="../bower_components/angular-ui-sortable/sortable.js"></script>
+<script src="../bower_components/bootstrap/js/dropdown.js"></script>
+<script src="../bower_components/bootstrap-select/dist/js/bootstrap-select.js"></script>
+<script src="../bower_components/bootstrap-switch/dist/js/bootstrap-switch.js"></script>
+<script src="../bower_components/bootstrap-tagsinput/dist/bootstrap-tagsinput.js"></script>
+<script src="../bower_components/moment/moment.js"></script>
+<script src="../bower_components/fullcalendar/dist/fullcalendar.js"></script>
+<script src="../bower_components/jquery.easing/js/jquery.easing.js"></script>
+<script src="../bower_components/jquery.easy-pie-chart/dist/jquery.easypiechart.js"></script>
+<script src="../bower_components/leaflet/dist/leaflet-src.js"></script>
+<script src="../bower_components/angular-progress-button-styles/dist/angular-progress-button-styles.min.js"></script>
+<script src="../bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+<script src="../bower_components/angular-chart.js/dist/angular-chart.js"></script>
+<script src="../bower_components/chartist/dist/chartist.min.js"></script>
+<script src="../bower_components/angular-chartist.js/dist/angular-chartist.js"></script>
+<script src="../bower_components/eve-raphael/eve.js"></script>
+<script src="../bower_components/raphael/raphael.min.js"></script>
+<script src="../bower_components/mocha/mocha.js"></script>
+<script src="../bower_components/morris.js/morris.js"></script>
+<script src="../bower_components/angular-morris-chart/src/angular-morris-chart.min.js"></script>
+<script src="../bower_components/ionrangeslider/js/ion.rangeSlider.js"></script>
+<script src="../bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+<script src="../bower_components/angular-animate/angular-animate.js"></script>
+<script src="../bower_components/rangy/rangy-core.js"></script>
+<script src="../bower_components/rangy/rangy-classapplier.js"></script>
+<script src="../bower_components/rangy/rangy-highlighter.js"></script>
+<script src="../bower_components/rangy/rangy-selectionsaverestore.js"></script>
+<script src="../bower_components/rangy/rangy-serializer.js"></script>
+<script src="../bower_components/rangy/rangy-textrange.js"></script>
+<script src="../bower_components/textAngular/dist/textAngular.js"></script>
+<script src="../bower_components/textAngular/dist/textAngular-sanitize.js"></script>
+<script src="../bower_components/textAngular/dist/textAngularSetup.js"></script>
+<script src="../bower_components/angular-xeditable/dist/js/xeditable.js"></script>
+<script src="../bower_components/jstree/dist/jstree.js"></script>
+<script src="../bower_components/ng-js-tree/dist/ngJsTree.js"></script>
+<script src="../bower_components/angular-loading-bar/build/loading-bar.js"></script>
+<script src="../bower_components/angular-bootstrap-checkbox/angular-bootstrap-checkbox.js"></script>
+<script src="../bower_components/angular-autodisable/angular-autodisable.js"></script>
+<script src="../bower_components/ngstorage/ngStorage.js"></script>
+<!-- endbower -->
+<!-- endbuild -->
+
+<script type="text/javascript">
+    'use strict';
+
+    angular.module('KingSign', [
+        'ngResource',
+        'toastr',
+    ]).run(function ($timeout, $rootScope) {
+        $timeout(function () {
+            $rootScope.show = true;
+        },3000);
+    });
+</script>
+<script type="text/javascript">
+    (function () {
+        'use strict';
+
+        angular.module('KingSign')
+            .controller('SignController', function ($scope, $resource, $window,toastr) {
+
+                $scope.user = {};
+                $scope.save = function () {
+                    $resource('api/sign', {}, {'sign': {method: 'POST'}})
+                        .sign($scope.user, function (data) {
+                            if (data.code == 0) {
+                                $window.open('/', '_self');
+                            }else{
+                                toastr.warning(data.msg, "提示", {"progressBar": true,});
+                            }
+                        }, function (error) {
+                            toastr.error(error, "提示", {"progressBar": true,});
+                        });
+                }
+            });
+
+
+    })();
+
+</script>
+<script type="text/javascript" color="255,192,203" opacity='0.9' zIndex="-1" count="200"
+        src="//cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js"></script>
+</body>
+</html>
