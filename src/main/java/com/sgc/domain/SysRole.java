@@ -9,9 +9,7 @@ import com.sgc.domain.vm.JsTreeVM;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
-/**
- * Created by Bruin
- */
+
 @TableName("sys_role")
 @Data
 @EqualsAndHashCode(callSuper = false)

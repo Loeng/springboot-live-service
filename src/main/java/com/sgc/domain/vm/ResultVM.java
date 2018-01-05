@@ -2,9 +2,7 @@ package com.sgc.domain.vm;
 
 import java.io.Serializable;
 
-/**
- * Created by Bruin
- */
+
 public class ResultVM implements Serializable {
     private static final long serialVersionUID = 1L;
 

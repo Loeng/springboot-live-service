@@ -2,9 +2,7 @@ package com.sgc.domain.vm;
 
 import java.io.Serializable;
 
-/**
- * Created by Bruin
- */
+
 public class SmartSort implements Serializable {
 	private static final long serialVersionUID = -2023024317939176197L;
 

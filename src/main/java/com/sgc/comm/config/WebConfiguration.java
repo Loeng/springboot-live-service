@@ -10,7 +10,7 @@ package com.sgc.comm.config;
 //import org.springframework.web.filter.CorsFilter;
 //
 ///**
-// * Created by Bruin
+// * Created by Wvv
 // */
 //@Aspect
 //@Configuration

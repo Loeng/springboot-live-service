@@ -109,7 +109,7 @@ public class ShopEnterController {
 	/**
 	 * 是否入駐商家 author Eddie
 	 */
-	@ApiOperation(value = "是否入駐商家", httpMethod = "Get", response = ResultVM.class)
+	@ApiOperation(value = "是否入駐商家", httpMethod = "GET", response = ResultVM.class)
 	@GetMapping("/isEnter/{username}")
 	public ResultVM isEnter(@PathVariable("username")String username) {
 		EntityWrapper<ShopEnter> wrapper = new EntityWrapper<>();
@@ -117,7 +117,7 @@ public class ShopEnterController {
 		ShopEnter selectOne = shopEnterService.selectOne(wrapper);
 		HashMap<String, Object> map = new HashMap<>();
 		if(selectOne!=null){
-			
+
 			map.put("msg", "您已申请入驻");
 			map.put("status", selectOne.getStatus());
 			return ResultVM.ok(map);
@@ -126,6 +126,6 @@ public class ShopEnterController {
 			map.put("status", 3);
 			return ResultVM.ok(map);
 		}
-				
+
 	}
 }

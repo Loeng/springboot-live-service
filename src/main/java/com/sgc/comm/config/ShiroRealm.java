@@ -17,16 +17,14 @@ import com.baomidou.mybatisplus.mapper.EntityWrapper;
 import com.sgc.domain.User;
 import com.sgc.app.service.UserService;
 
-/**
- * Created by Bruin
- */
+
 @Component
 public class ShiroRealm extends AuthorizingRealm {
 
 	@Autowired
 	private UserService userService;
 	/**
-	 * @Author : Bruin
+	 * @Author : Wvv
 	 * @Description : 授权(验证权限时调用)
 	 */
 	@Override
@@ -43,7 +41,7 @@ public class ShiroRealm extends AuthorizingRealm {
 	}
 
 	/**
-	 * @Author : Bruin
+	 * @Author : Wvv
 	 * @Description : 认证(登录时调用)
 	 */
 	@SuppressWarnings("unchecked")

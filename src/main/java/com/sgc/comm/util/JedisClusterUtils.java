@@ -24,7 +24,7 @@ import com.alibaba.fastjson.parser.Feature;
 /**
  * Redis工具类
  * 
- * @author Bruin
+ * @author Wvv
  * 
  */
 public class JedisClusterUtils {

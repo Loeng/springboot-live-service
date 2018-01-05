@@ -13,7 +13,7 @@ import lombok.EqualsAndHashCode;
 
 /**
  * 通用实体（通用字段）
- * Created by Bruin
+ * Created by Wvv
  */
 @Data
 @EqualsAndHashCode(callSuper = false)

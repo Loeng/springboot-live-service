@@ -23,11 +23,12 @@ public class Account extends Model<Account> implements Serializable {
 	private String pwd;
 	private String token;
 	private Integer state;
-	private String sig;
-	private String create_time;
-	private String login;
-	private String loginout;
-	private String login_last;
+	private String userSig;
+	private String registerTime;
+	private String loginTime;
+	private String logoutTime;
+	private String lastRequestTime;
+	private String currentAppId;
 
 
 	public Account(){}
@@ -37,7 +38,7 @@ public class Account extends Model<Account> implements Serializable {
 	}
 
 	protected Serializable pkVal() {
-		return this.uid;
+		return this.id;
 	}
 
 }

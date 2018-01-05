@@ -9,9 +9,7 @@ import com.sgc.comm.util.Constants;
 
 
 
-/**
- * Created by Bruin
- */
+
 @Configuration
 @EnableAspectJAutoProxy
 public class LoggingAspectConfiguration {

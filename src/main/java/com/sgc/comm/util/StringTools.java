@@ -1,8 +1,6 @@
 package com.sgc.comm.util;
 
-/**
- * Created by Bruin
- */
+
 public class StringTools {
 
     /**

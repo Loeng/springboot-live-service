@@ -2,9 +2,7 @@ package com.sgc.domain.vm;
 
 import java.io.Serializable;
 
-/**
- * Created by Bruin
- */
+
 public class DynamicVM implements Serializable {
 	@Override
 	public String toString() {

@@ -15,9 +15,7 @@ import com.sgc.comm.util.Constants;
 
 import lombok.extern.slf4j.Slf4j;
 
-/**
- * Created by Bruin
- */
+
 @Slf4j
 @Aspect
 public class LoggingAspect {

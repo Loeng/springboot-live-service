@@ -45,8 +45,17 @@ public class AccountServiceImpl extends ServiceImpl<AccountMapper, Account> impl
 	public ResultVM registerAccount(Account account) {
 		String path = ClassUtils.getDefaultClassLoader().getResource("").getPath();
 		System.out.println("Path:"+path);
-        boolean ret = this.insert(account);
-        if(ret) {
+
+		//boolean  ret = account.insert();
+		//if(ret){
+		//	System.out.println("inset account success!");
+		//}
+
+        //boolean ret = this.insert(account);
+		//Integer aid = accountMapper.insert(account);
+		Integer aid=1;
+
+        if(aid>0) {
         	timRest.init(sdkappid,identifier);
 			String signature = null;
 			if(timRest.is_64bit()){

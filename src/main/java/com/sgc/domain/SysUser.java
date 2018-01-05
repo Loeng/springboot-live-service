@@ -9,9 +9,7 @@ import com.baomidou.mybatisplus.annotations.TableName;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
-/**
- * Created by Bruin
- */
+
 @TableName("sys_user")
 @Data
 @EqualsAndHashCode(callSuper = false)

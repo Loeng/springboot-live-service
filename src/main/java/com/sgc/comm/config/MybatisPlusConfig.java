@@ -8,9 +8,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 
-/**
- * Created by Bruin
- */
+
 @Configuration
 @MapperScan("com.sgc.domain.mapper*")
 public class MybatisPlusConfig {

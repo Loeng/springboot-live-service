@@ -7,9 +7,7 @@ import org.apache.shiro.subject.Subject;
 import com.sgc.domain.SysUser;
 
 
-/**
- * Created by Bruin
- */
+
 public class ShiroUtils {
 
 	public static Session getSession() {

@@ -23,7 +23,7 @@ import com.sgc.domain.vm.SmartPageVM;
 
 /**
  * 通用Controller（增删改查） 
- * Created by Bruin
+ * Created by Wvv
  */
 public abstract class BaseController<S extends IService<T>, T extends BaseModel<T>> {
 

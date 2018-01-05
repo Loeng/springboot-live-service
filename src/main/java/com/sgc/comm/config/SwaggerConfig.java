@@ -23,6 +23,8 @@ public class SwaggerConfig {
  
 	@Value("${server.servlet-path}")
 	private String pathMapping;
+	@Value("${server.port}")
+	private Integer port;
  
 	private ApiInfo initApiInfo() {
 		ApiInfo apiInfo = new ApiInfo("SGC Platform API", // 大标题
@@ -44,7 +46,7 @@ public class SwaggerConfig {
  
 	@Bean
 	public Docket restfulApi() {
-		log.info("API文档：http://localhost:8888" + pathMapping + "/swagger-ui.html");
+		log.info("API文档：http://localhost:"+ port + pathMapping + "/swagger-ui.html");
 		return new Docket(DocumentationType.SWAGGER_2).groupName("RestfulApi")
 				// .genericModelSubstitutes(DeferredResult.class)
 				.genericModelSubstitutes(ResponseEntity.class).useDefaultResponseMessages(true).forCodeGeneration(false)

@@ -4,21 +4,25 @@ package com.sgc.app.controller;
 import com.baomidou.mybatisplus.mapper.EntityWrapper;
 import com.sgc.app.service.AccountService;
 import com.sgc.domain.Entity.Account;
+import com.sgc.domain.mapper.AccountMapper;
 import com.sgc.domain.vm.RegRequestData;
 import com.sgc.domain.vm.ResultVM;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 @RestController("appAccount")
 @RequestMapping("/account")
+@Slf4j
 public class AppAccount {
     @Autowired
     private AccountService accountService;
 
-    @PostMapping("/reg")
+    @PostMapping(value = "/reg")
     public ResultVM regAppUser(@RequestBody RegRequestData req){
         String uid = req.getUid();
         String pass = req.getPass();
+        System.out.println("UId"+uid);
         //参数判断
         if (uid==null || uid.isEmpty()){
             return ResultVM.error(1,"账号为空");
@@ -39,6 +43,7 @@ public class AppAccount {
         Account account =  new Account();
         account.setUid(uid);
         account.setPwd(pass);
+
         ResultVM ret = accountService.registerAccount(account);
         return  ret;
     }
